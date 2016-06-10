@@ -4,6 +4,9 @@ ul{
 nav ul li, footer ul li{
     display:inline-block;
 }
+nav ul li:hover, footer ul li:hover{
+    cursor: pointer;
+}
 nav a{
     text-decoration: none;
 }
