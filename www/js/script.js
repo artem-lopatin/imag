@@ -1,7 +1,20 @@
 [].forEach.call(document.querySelectorAll('li:not(#cat)'),function(elem){
     elem.addEventListener('click', function(e){
-        document.getElementById('main').style.display='none';
-        document.getElementById('frame').style.display='';
-        document.getElementById('iframe').setAttribute('src',e.target.id+'.html');
+        var content=document.getElementsByTagName('main')[0];
+        //content.style.display='none';
+
+        var xhr = new XMLHttpRequest();
+
+        xhr.open('GET', e.target.id+'.html', false);
+        xhr.send();
+
+        var newNode = document.createElement('section');
+        newNode.innerHTML = xhr.responseText;
+        
+        content.replaceChild(newNode,content.firstElementChild);
+
     },false);
 });
+
+
+
