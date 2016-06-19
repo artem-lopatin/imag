@@ -1,7 +1,3 @@
-<style>
-    div{  width:25%;text-align: center;float:left;}
-    div img{width:150px;}
-</style>
 <?php
 include_once 'products.php';
 

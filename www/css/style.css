@@ -15,7 +15,17 @@ main section div{
     width:25%;
     text-align: center;
     float:left;
-}main section div img{
+}
+.comments{
+    width:25%;
+    float:left;
+    text-align: left;
+}
+.commentFrame{
+    width: 90%;
+    border: 0;
+}
+main section div img{
     width:150px;
 }
 footer ul{
@@ -24,3 +34,5 @@ footer ul{
 footer p{
  float: right;
 }
+/*{  width:25%;text-align: center;float:left;}*/
+#main img{width:150px;}

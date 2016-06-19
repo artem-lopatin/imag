@@ -23,9 +23,24 @@
     <hr>
     <main>
         <section id="main">
-            <iframe src="cat.php" frameborder="0" id="iframe" width="100%" height="300" scrolling="auto" allowfullscreen></iframe>
+            <form method="post" id="toCart" >
+                <?php
+                require_once 'products.php';
+                foreach($products as $product):
+                    ?>
+                    <div class="products">
+                        <a href="inCart.php">
+                            <img src="<?=$product['img']?>" style="width:150px;">
+                        </a><br>
+                        <input type="checkbox" name="<?=$product['name']?>">
+                        <p><?=$product['name']?></p>
+                    </div>
+                <?php endforeach; ?>
+                <!---->
+                <input type="submit" value="Добавить в корзину">
+            </form>
         </section>
-        <!--<div style="clear: both"></div>-->
+        <div style="clear: both"></div>
     </main>
     <hr>
     <footer>
