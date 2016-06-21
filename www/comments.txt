@@ -1,0 +1,12 @@
+1;Artem;First;14:06:16
+2;Nina;Had two;14:06:16
+3;San;Broke;14:06:16
+4;Dim;Cool!;14:06:16
+2;Petr;Samsung;14:06:16
+4;Mirka;Very!;14:06:16
+4;Viktor;Super!;14:06:16
+1;ddd;best;14:06:16
+3;ddd;rests;14:06:16
+1;ddd;rest;14:06:16
+1;;;14:06:16;10
+2;;;14:06:16;7
