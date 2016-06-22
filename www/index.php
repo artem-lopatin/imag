@@ -23,24 +23,42 @@
     <hr>
     <main>
         <section id="main">
-            <iframe src="cat.php" frameborder="0" id="iframe" width="100%" height="300" scrolling="auto" allowfullscreen></iframe>
+            <form method="post" id="toCart" >
+                <?php
+                require_once 'products.php';
+                foreach($products as $product):
+                    ?>
+                    <div class="products">
+                        <a href="inCart.php">
+                            <img src="<?=$product['img']?>" style="width:150px;">
+                        </a><br>
+                        <input type="checkbox" name="<?=$product['name']?>">
+                        <p><?=$product['name']?></p>
+                    </div>
+                <?php endforeach; ?>
+                <!---->
+                <input type="submit" value="Добавить в корзину">
+            </form>
         </section>
         <section id="comments">
-        <?php
+            <?php
             for($i=1;$i<5;$i++): ?>
-            <div class="comments">
-                <form method="get" action="addComment.php" class="commentForm">
-                    <input type="hidden" name="idTovar" value="<?=$i?>">
-                    <input type="text" name="name"><br>
-                    <textarea name="comment" id=""></textarea><br>
-                    <input type="range" min="4" max="10" st name="rate"><br>
-                    <input type="submit">
-                </form><br>
-                <iframe src="showComments.php?idTovar=<?=$i?>" class="commentFrame"></iframe>
-            </div>
+                <div class="comments">
+                    <form method="get" action="addComment.php" id="addComment" class="commentForm">
+                        <input type="hidden" name="idTovar" value="<?=$i?>">
+                        <input type="text" name="name"><br>
+                        <textarea name="comment" id=""></textarea><br>
+                        <input type="range" min="4" max="10" st name="rate"><br>
+                        <input type="submit">
+                    </form><br>
+                    <div class="comment" id="<?=$i?>">
+                        <?php require 'showComments.php';?>
+                    </div>
+                    <!--<iframe src="showComments.php?idTovar=<?=$i?>" class="commentFrame"></iframe>-->
+                </div>
             <?php endfor; ?>
         </section>
-        <!--<div style="clear: both"></div>-->
+        <div style="clear: both"></div>
     </main>
     <hr>
     <footer>

@@ -30,7 +30,8 @@ $handle=fopen(C,'a');
 fwrite($handle, $_REQUEST['idTovar'].';'.$_REQUEST['name'].';'.Antimat($_REQUEST['comment']).';'.date('d:m:y').';'.$_REQUEST['rate'].PHP_EOL);
 fclose($handle);
 
-$handle = fopen(C, 'r');
-$text=fread($handle,1000000);
-
-echo $text;
+//$handle = fopen(C, 'r');
+//$text=fread($handle,1000000);
+//
+//echo $text;
+header('Location:index.php');
