@@ -44,11 +44,12 @@
             <?php
             for($i=1;$i<5;$i++): ?>
                 <div class="comments">
-                    <form method="get" action="addComment.php" id="addComment" class="commentForm">
+                    <form method="post" action="addComment.php" id="addComment" class="commentForm" enctype="multipart/form-data">
                         <input type="hidden" name="idTovar" value="<?=$i?>">
                         <input type="text" name="name"><br>
                         <textarea name="comment" id=""></textarea><br>
-                        <input type="range" min="4" max="10" st name="rate"><br>
+                        <input type="range" min="4" max="10" name="rate"><br>
+                        <input type="file" name="photo" accept="image/png;image/ipeg" ><br><br>
                         <input type="submit">
                     </form><br>
                     <div class="comment" id="<?=$i?>">
